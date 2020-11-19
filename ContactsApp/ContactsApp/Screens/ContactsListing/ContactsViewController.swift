@@ -7,13 +7,20 @@
 
 import UIKit
 
+/// Delegate protocol for handling PersonsViewController actions
+protocol ContactsViewControllerDelegate: AnyObject {
+    func didSelect(contact: Contact, in viewController: ContactsViewController)
+}
+
 class ContactsViewController: UIViewController {
     
     private var contacts: [Contact] = []
+    private weak var delegate: ContactsViewControllerDelegate?
     private let tableView = UITableView()
     
-    public init(dataSource: ContactsDataSourceable) {
+    public init(dataSource: ContactsDataSourceable, delegate: ContactsViewControllerDelegate?) {
         self.contacts = dataSource.contacts
+        self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -36,9 +43,7 @@ extension ContactsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedContact = contacts[indexPath.row]
-        let contactVC = ContactViewController(contact: selectedContact)
-        contactVC.title = selectedContact.name
-        navigationController?.pushViewController(contactVC, animated: true)
+        delegate?.didSelect(contact: selectedContact, in: self)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

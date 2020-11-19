@@ -10,6 +10,10 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    
+    private lazy var appCoordinator: AppCoordinator = {
+        AppCoordinator(window: self.window!)
+    }()
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -20,9 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
         
-        window?.rootViewController = UINavigationController(rootViewController: ContactsViewController(dataSource: ContactsDataSource()))
-        window?.rootViewController?.view.backgroundColor = .yellow  // So we can see it
-        window?.makeKeyAndVisible()
+        appCoordinator.start()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

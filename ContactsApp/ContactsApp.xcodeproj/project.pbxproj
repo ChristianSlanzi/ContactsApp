@@ -22,6 +22,10 @@
 		24ADB13625672BC200D03877 /* ContactsDataSourceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADB13525672BC200D03877 /* ContactsDataSourceable.swift */; };
 		24ADB13B25672C2300D03877 /* ContactsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADB13A25672C2300D03877 /* ContactsDataSource.swift */; };
 		24ADB14825672F3900D03877 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADB14725672F3900D03877 /* FlowCoordinator.swift */; };
+		24ADB14D25672F8500D03877 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADB14C25672F8500D03877 /* AppCoordinator.swift */; };
+		24ADB1522567306C00D03877 /* ShowContactsFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADB1512567306C00D03877 /* ShowContactsFlowCoordinator.swift */; };
+		24ADB1572567308300D03877 /* ShowGroupsFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADB1562567308300D03877 /* ShowGroupsFlowCoordinator.swift */; };
+		24ADB15D2567320600D03877 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADB15C2567320600D03877 /* GroupsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		24ADB13525672BC200D03877 /* ContactsDataSourceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsDataSourceable.swift; sourceTree = "<group>"; };
 		24ADB13A25672C2300D03877 /* ContactsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsDataSource.swift; sourceTree = "<group>"; };
 		24ADB14725672F3900D03877 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
+		24ADB14C25672F8500D03877 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		24ADB1512567306C00D03877 /* ShowContactsFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowContactsFlowCoordinator.swift; sourceTree = "<group>"; };
+		24ADB1562567308300D03877 /* ShowGroupsFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowGroupsFlowCoordinator.swift; sourceTree = "<group>"; };
+		24ADB15C2567320600D03877 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +163,7 @@
 		24ADB112256723AD00D03877 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				24ADB15B256731E900D03877 /* GroupsListing */,
 				24ADB12F2567292300D03877 /* ContactDetail */,
 				24ADB113256723BA00D03877 /* ContactsListing */,
 			);
@@ -209,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				24ADB14625672F2000D03877 /* Protocol */,
+				24ADB14C25672F8500D03877 /* AppCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -217,8 +227,18 @@
 			isa = PBXGroup;
 			children = (
 				24ADB14725672F3900D03877 /* FlowCoordinator.swift */,
+				24ADB1512567306C00D03877 /* ShowContactsFlowCoordinator.swift */,
+				24ADB1562567308300D03877 /* ShowGroupsFlowCoordinator.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		24ADB15B256731E900D03877 /* GroupsListing */ = {
+			isa = PBXGroup;
+			children = (
+				24ADB15C2567320600D03877 /* GroupsViewController.swift */,
+			);
+			path = GroupsListing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,6 +371,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24ADB15D2567320600D03877 /* GroupsViewController.swift in Sources */,
+				24ADB1522567306C00D03877 /* ShowContactsFlowCoordinator.swift in Sources */,
+				24ADB1572567308300D03877 /* ShowGroupsFlowCoordinator.swift in Sources */,
+				24ADB14D25672F8500D03877 /* AppCoordinator.swift in Sources */,
 				24ADB10B2567238300D03877 /* Contact.swift in Sources */,
 				24ADB13625672BC200D03877 /* ContactsDataSourceable.swift in Sources */,
 				24ADB14825672F3900D03877 /* FlowCoordinator.swift in Sources */,
