@@ -21,6 +21,7 @@
 		24ADB1312567293B00D03877 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADB1302567293B00D03877 /* ContactViewController.swift */; };
 		24ADB13625672BC200D03877 /* ContactsDataSourceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADB13525672BC200D03877 /* ContactsDataSourceable.swift */; };
 		24ADB13B25672C2300D03877 /* ContactsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADB13A25672C2300D03877 /* ContactsDataSource.swift */; };
+		24ADB14825672F3900D03877 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADB14725672F3900D03877 /* FlowCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		24ADB1302567293B00D03877 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		24ADB13525672BC200D03877 /* ContactsDataSourceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsDataSourceable.swift; sourceTree = "<group>"; };
 		24ADB13A25672C2300D03877 /* ContactsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsDataSource.swift; sourceTree = "<group>"; };
+		24ADB14725672F3900D03877 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				24ADB120256726B200D03877 /* Data */,
 				24ADB1092567237100D03877 /* Model */,
 				24ADB112256723AD00D03877 /* Screens */,
+				24ADB14525672F0900D03877 /* Coordinators */,
 				2495D06F2567044600D2BAA0 /* AppDelegate.swift */,
 				2495D0712567044600D2BAA0 /* SceneDelegate.swift */,
 				2495D0782567044900D2BAA0 /* Assets.xcassets */,
@@ -200,6 +203,22 @@
 				24ADB1302567293B00D03877 /* ContactViewController.swift */,
 			);
 			path = ContactDetail;
+			sourceTree = "<group>";
+		};
+		24ADB14525672F0900D03877 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				24ADB14625672F2000D03877 /* Protocol */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		24ADB14625672F2000D03877 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				24ADB14725672F3900D03877 /* FlowCoordinator.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +353,7 @@
 			files = (
 				24ADB10B2567238300D03877 /* Contact.swift in Sources */,
 				24ADB13625672BC200D03877 /* ContactsDataSourceable.swift in Sources */,
+				24ADB14825672F3900D03877 /* FlowCoordinator.swift in Sources */,
 				24ADB13B25672C2300D03877 /* ContactsDataSource.swift in Sources */,
 				24ADB1312567293B00D03877 /* ContactViewController.swift in Sources */,
 				24ADB1192567265600D03877 /* ContactTableViewCell.swift in Sources */,
