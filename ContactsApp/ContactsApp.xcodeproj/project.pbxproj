@@ -15,6 +15,9 @@
 		2495D0872567044A00D2BAA0 /* ContactsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2495D0862567044A00D2BAA0 /* ContactsAppTests.swift */; };
 		2495D0922567044A00D2BAA0 /* ContactsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2495D0912567044A00D2BAA0 /* ContactsAppUITests.swift */; };
 		24ADB10B2567238300D03877 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADB10A2567238300D03877 /* Contact.swift */; };
+		24ADB1192567265600D03877 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADB1182567265600D03877 /* ContactTableViewCell.swift */; };
+		24ADB1232567270B00D03877 /* ContactAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADB1222567270B00D03877 /* ContactAPI.swift */; };
+		24ADB12B2567272D00D03877 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24ADB12A2567272D00D03877 /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		2495D0912567044A00D2BAA0 /* ContactsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsAppUITests.swift; sourceTree = "<group>"; };
 		2495D0932567044A00D2BAA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24ADB10A2567238300D03877 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		24ADB1182567265600D03877 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		24ADB1222567270B00D03877 /* ContactAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAPI.swift; sourceTree = "<group>"; };
+		24ADB12A2567272D00D03877 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		2495D06E2567044600D2BAA0 /* ContactsApp */ = {
 			isa = PBXGroup;
 			children = (
+				24ADB120256726B200D03877 /* Data */,
 				24ADB1092567237100D03877 /* Model */,
 				24ADB112256723AD00D03877 /* Screens */,
 				2495D06F2567044600D2BAA0 /* AppDelegate.swift */,
@@ -147,9 +154,35 @@
 		24ADB113256723BA00D03877 /* ContactsListing */ = {
 			isa = PBXGroup;
 			children = (
+				24ADB1172567263B00D03877 /* Cells */,
 				2495D0732567044600D2BAA0 /* ContactsViewController.swift */,
 			);
 			path = ContactsListing;
+			sourceTree = "<group>";
+		};
+		24ADB1172567263B00D03877 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				24ADB1182567265600D03877 /* ContactTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		24ADB120256726B200D03877 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				24ADB121256726BC00D03877 /* Stub */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		24ADB121256726BC00D03877 /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				24ADB12A2567272D00D03877 /* Media.xcassets */,
+				24ADB1222567270B00D03877 /* ContactAPI.swift */,
+			);
+			path = Stub;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2495D07C2567044900D2BAA0 /* LaunchScreen.storyboard in Resources */,
+				24ADB12B2567272D00D03877 /* Media.xcassets in Resources */,
 				2495D0792567044900D2BAA0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,9 +316,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				24ADB10B2567238300D03877 /* Contact.swift in Sources */,
+				24ADB1192567265600D03877 /* ContactTableViewCell.swift in Sources */,
 				2495D0742567044600D2BAA0 /* ContactsViewController.swift in Sources */,
 				2495D0702567044600D2BAA0 /* AppDelegate.swift in Sources */,
 				2495D0722567044600D2BAA0 /* SceneDelegate.swift in Sources */,
+				24ADB1232567270B00D03877 /* ContactAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
