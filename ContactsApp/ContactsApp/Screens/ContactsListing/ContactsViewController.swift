@@ -12,8 +12,8 @@ class ContactsViewController: UIViewController {
     private var contacts: [Contact] = []
     private let tableView = UITableView()
     
-    public init(contacts: [Contact]) {
-        self.contacts = contacts
+    public init(dataSource: ContactsDataSourceable) {
+        self.contacts = dataSource.contacts
         super.init(nibName: nil, bundle: nil)
     }
     

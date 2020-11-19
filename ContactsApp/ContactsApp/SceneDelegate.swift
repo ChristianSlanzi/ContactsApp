@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
         
-        window?.rootViewController = UINavigationController(rootViewController: ContactsViewController(contacts: ContactAPI.getContacts()))
+        window?.rootViewController = UINavigationController(rootViewController: ContactsViewController(dataSource: ContactsDataSource()))
         window?.rootViewController?.view.backgroundColor = .yellow  // So we can see it
         window?.makeKeyAndVisible()
     }
