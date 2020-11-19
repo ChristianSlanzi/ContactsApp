@@ -25,17 +25,17 @@ class ShowGroupsFlowCoordinator: FlowCoordinator {
     }
     
     func start() {
-        let contactsVC = GroupsViewController(contacts: dataSource.contacts, delegate: self)
+        let contactsVC = GroupsViewController(dataSource: dataSource, delegate: self)
         contactsVC.title = "Groups"
         contactsVC.tabBarItem = UITabBarItem(title: "Groups", image: UIImage(named: "Groups"), tag: 0)
         navigationController = UINavigationController(rootViewController: contactsVC)
     }
 }
 
-extension ShowGroupsFlowCoordinator: ContactsViewControllerDelegate {
-    func didSelect(contact: Contact, in viewController: ContactsViewController) {
-      let contactVC = ContactViewController(contact: contact)
-      navigationController.pushViewController(contactVC, animated: true)
+extension ShowGroupsFlowCoordinator: GroupsViewControllerDelegate {
+    func didSelect(group: Group, in viewController: GroupsViewController) {
+      let groupVC = GroupViewController(group: group)
+      navigationController.pushViewController(groupVC, animated: true)
     }
 }
 

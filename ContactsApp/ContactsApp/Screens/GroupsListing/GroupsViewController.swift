@@ -8,16 +8,17 @@
 import UIKit
 
 protocol GroupsViewControllerDelegate: AnyObject {
-    func didSelect(contact: Contact, in viewController: ContactsViewController)
+    func didSelect(group: Group, in viewController: GroupsViewController)
 }
 
 class GroupsViewController: UIViewController {
     
-    private var contacts: [Contact] = []
-    private weak var delegate: ContactsViewControllerDelegate?
+    private var groups: [Group] = []
+    private weak var delegate: GroupsViewControllerDelegate?
     private let tableView = UITableView()
 
-    public init(contacts: [Contact], delegate: ContactsViewControllerDelegate?) {
+    public init(dataSource: ContactsDataSourceable, delegate: GroupsViewControllerDelegate?) {
+        self.groups = dataSource.groups
         self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
     }
@@ -29,5 +30,35 @@ class GroupsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        
+        view.addSubview(tableView)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.frame = view.frame
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    }
+}
+
+extension GroupsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedGroup = groups[indexPath.row]
+        delegate?.didSelect(group: selectedGroup, in: self)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+}
+
+extension GroupsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return groups.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = groups[indexPath.row].name
+        return cell
     }
 }

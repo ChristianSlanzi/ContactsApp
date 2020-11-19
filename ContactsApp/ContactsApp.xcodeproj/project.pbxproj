@@ -26,6 +26,8 @@
 		24ADB1522567306C00D03877 /* ShowContactsFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADB1512567306C00D03877 /* ShowContactsFlowCoordinator.swift */; };
 		24ADB1572567308300D03877 /* ShowGroupsFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADB1562567308300D03877 /* ShowGroupsFlowCoordinator.swift */; };
 		24ADB15D2567320600D03877 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADB15C2567320600D03877 /* GroupsViewController.swift */; };
+		24ADB168256738FE00D03877 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADB167256738FE00D03877 /* Group.swift */; };
+		24ADB16E25673A9600D03877 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24ADB16D25673A9600D03877 /* GroupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		24ADB1512567306C00D03877 /* ShowContactsFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowContactsFlowCoordinator.swift; sourceTree = "<group>"; };
 		24ADB1562567308300D03877 /* ShowGroupsFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowGroupsFlowCoordinator.swift; sourceTree = "<group>"; };
 		24ADB15C2567320600D03877 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
+		24ADB167256738FE00D03877 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		24ADB16D25673A9600D03877 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				24ADB10A2567238300D03877 /* Contact.swift */,
+				24ADB167256738FE00D03877 /* Group.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 		24ADB112256723AD00D03877 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				24ADB16C25673A8000D03877 /* GroupDetail */,
 				24ADB15B256731E900D03877 /* GroupsListing */,
 				24ADB12F2567292300D03877 /* ContactDetail */,
 				24ADB113256723BA00D03877 /* ContactsListing */,
@@ -239,6 +245,14 @@
 				24ADB15C2567320600D03877 /* GroupsViewController.swift */,
 			);
 			path = GroupsListing;
+			sourceTree = "<group>";
+		};
+		24ADB16C25673A8000D03877 /* GroupDetail */ = {
+			isa = PBXGroup;
+			children = (
+				24ADB16D25673A9600D03877 /* GroupViewController.swift */,
+			);
+			path = GroupDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,9 +385,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24ADB16E25673A9600D03877 /* GroupViewController.swift in Sources */,
 				24ADB15D2567320600D03877 /* GroupsViewController.swift in Sources */,
 				24ADB1522567306C00D03877 /* ShowContactsFlowCoordinator.swift in Sources */,
 				24ADB1572567308300D03877 /* ShowGroupsFlowCoordinator.swift in Sources */,
+				24ADB168256738FE00D03877 /* Group.swift in Sources */,
 				24ADB14D25672F8500D03877 /* AppCoordinator.swift in Sources */,
 				24ADB10B2567238300D03877 /* Contact.swift in Sources */,
 				24ADB13625672BC200D03877 /* ContactsDataSourceable.swift in Sources */,

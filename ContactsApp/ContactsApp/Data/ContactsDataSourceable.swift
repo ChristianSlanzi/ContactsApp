@@ -7,4 +7,5 @@
 
 protocol ContactsDataSourceable {
     var contacts: [Contact] { get }
+    var groups: [Group] { get }
 }
