@@ -34,6 +34,13 @@ class ContactsViewController: UIViewController {
 
 extension ContactsViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedContact = contacts[indexPath.row]
+        let contactVC = ContactViewController(contact: selectedContact)
+        contactVC.title = selectedContact.name
+        navigationController?.pushViewController(contactVC, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
