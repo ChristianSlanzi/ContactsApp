@@ -1,0 +1,25 @@
+source 'https://github.com/CocoaPods/Specs.git'
+#source 'https://cdn.cocoapods.org/'
+source 'https://github.com/christianslanzi/Specs.git'
+
+platform :ios, '13.0'
+
+target 'ContactsApp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ContactsApp
+    pod 'CS_Common_Utils', git: 'https://github.com/christianslanzi/CS_Common_Utils.git'
+    pod 'CS_Common_UI', git: 'https://github.com/christianslanzi/CS_Common_UI.git'
+    pod 'Overture'
+
+  target 'ContactsAppTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'ContactsAppUITests' do
+    # Pods for testing
+  end
+
+end
